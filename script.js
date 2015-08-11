@@ -73,4 +73,4 @@ easyPack.getPaczkomatyList = function (url) {
 
 /////////////////////////////////// uruchomienie widgetu
 
-easyPack.ListWidget('widget');
+//easyPack.ListWidget('widget');
