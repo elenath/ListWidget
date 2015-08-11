@@ -14,12 +14,13 @@ var SingletonClass = (function () {
 
             for (var i = 0; i < simpleData.length; i++) {
                 var opt = simpleData[i].address.city + " " + simpleData[i].address.street + " " + simpleData[i].address.building_no + ", " + simpleData[i].address.post_code;
+                //var opt = simpleData[i].id;
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
                 select.appendChild(el);
             }
-        }, function (status) { //error detection....
+        }, function (status) { //detekcja błędów
             alert('Something went wrong.');
         });
     }
@@ -43,7 +44,7 @@ easyPack.ListWidget = function (element) {
     document.getElementById('widget').innerHTML = '<select id="' + position + '"> <option>Wybierz Paczkomat</option> </select>';
 
     console.log('Widget Initialize');
-    console.log("nazwa: " + position);
+    //console.log("nazwa: " + position);
     if (typeof element !== 'undefined') {
         SingletonClass.getInstance(position);
     }
